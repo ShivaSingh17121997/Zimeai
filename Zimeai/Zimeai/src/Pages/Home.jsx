@@ -113,7 +113,7 @@ export default function Home() {
     }
 
     return (
-        <div >
+        <div style={{ maxWidth: "1280px" }} >
 
             <div style={{ margin: "10px auto 10px  ", width: "960px" }} >
                 <Input
@@ -334,7 +334,9 @@ export default function Home() {
 
 
             {/* Table  */}
-            <Table pagination={false} columns={columns} dataSource={data} scroll={{ y: 430 }} />
+            <div style={{ maxWidth: "1280px" }} >
+                <Table pagination={false} columns={columns} dataSource={data} scroll={{ y: 430 }} />
+            </div>
 
 
 
