@@ -33,18 +33,18 @@ export default function Home() {
         {
             title: "ID",
             dataIndex: "id",
-            width:"50px"
+            width: "50px"
         },
         {
             title: "Title",
             dataIndex: "title",
-            width:"230px"
+            width: "230px"
 
         },
         {
             title: "Body",
             dataIndex: "body",
-            width:"700px"
+            width: "700px"
 
         }, {
             title: "Tags",
@@ -75,6 +75,7 @@ export default function Home() {
             console.log(searchQuery)
             // Fetching the data from the API 
             axios.get(`https://dummyjson.com/posts/search?q=${searchQuery}&skip=${skip}&limit=10`)
+
                 .then((response) => {
                     console.log(response.data.posts);
                     setData(response.data.posts);
@@ -333,12 +334,12 @@ export default function Home() {
 
 
             {/* Table  */}
-            <Table   pagination={false}  columns={columns} dataSource={data} scroll={{ y: 430 }} />
+            <Table pagination={false} columns={columns} dataSource={data} scroll={{ y: 430 }} />
 
 
 
             {/* Pagination */}
-            <div style={{margin:"15px 0 0 0"}} >
+            <div style={{ margin: "15px 0 0 0" }} >
                 {
                     <Pagination page={page} nextPage={nextPage} dataSource={data} prevPage={prevPage} />
                 }
